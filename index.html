@@ -37,7 +37,7 @@
         </div>
 
         <div class="contenedor" v-if="ls_apt=='Administrador'">
-            <span class="print" @click="prt">&#xf02f;</span> <span>&#xf08b;</span>
+            <span class="print" @click="prt">&#xf02f;</span> <span @click="log_out">&#xf08b;</span>
             <h3 style="text-align: center; color: aqua; margin-top: -4%;">Administrador </h3>
             <select v-model="ls_adm" class="personalizacion" required="true">
                 <option value="0">Ensamblador</option>
@@ -150,7 +150,7 @@
                 <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
             </form>
         </div>
-    <div  v-if="ls_apt=='Administrador'">
+    <div  v-if="ls_apt=='Administrador' && prnt">
 
     <table>
         <tr>
