@@ -16,8 +16,8 @@ var app = new Vue({
         nm_zpt:0,//número de zapatos ensamblados
         nm_zpl:0,//número de zapatillas ensamblados
         hj:0,//hijos ensamblador
-        cnt_ven:0,
-        cnt_venzl:0,
+        cnt_ven:0,//cantidad de zapatos vendida
+        cnt_venzl:0,//cantidad de zapatillas vendida
         employes:[],
     },
     methods:{
