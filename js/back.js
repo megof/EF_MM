@@ -97,9 +97,15 @@ var app = new Vue({
             return sly;
         },
         log_in(){
-            (this.pin_apt==0123)?
-            this.ls_apt = "1":
-            this.ls_apt = "2";
+            (this.pin_apt=="0123" && this.ls_log=="Administrador")?
+                (this.ls_apt = "Administrador", this.login=false):
+                (this.pin_apt=="1234" && this.ls_log=="Ensamblador")?
+                    (this.ls_apt = "Ensamblador", this.login=false):
+                    (this.pin_apt=="2345" && this.ls_log=="Secretario")?
+                    (this.ls_apt = "Secretario", this.login=false):
+                        (this.pin_apt=="3456" && this.ls_log=="Vendedor")?
+                            (this.ls_apt = "Vendedor", this.login=false):
+                            this.message = "Contraseña incorrecta";
         },
     },
 })
