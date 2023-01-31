@@ -21,6 +21,7 @@ var app = new Vue({
         hj:0,//hijos ensamblador
         employes:[],
         login:true,
+        prnt:false,
     },
     methods:{
         guardarDatos(){
@@ -111,6 +112,14 @@ var app = new Vue({
                         (this.pin_apt=="3456" && this.ls_log=="Vendedor")?
                             (this.ls_apt = "Vendedor", this.login=false):
                             this.message = "Contraseña incorrecta";
+        },
+        prt(){
+            this.prnt = !this.prnt
+        },
+        log_out(){
+            this.login = true;
+            this.ls_apt = "";
+            this.prnt = false;
         },
     },
 })
