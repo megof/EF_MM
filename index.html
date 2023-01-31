@@ -14,17 +14,17 @@
             <div class="elemento">
                 <label for="appointment">Cargo: </label>
                 <br>
-                <select class="personalizacion" required="true">
+                <select v-model="ls_apt" class="personalizacion" required="true">
 
                     <option>Administrador</option>
                     <option>Ensamblador</option>
                     <option>Secretario</option>
-                    <option>Vendedor</option>
+                    <option>Vendedores</option>
                   </select>
             </div>
             <div class="elemento">
                 <label for="pin">Pin: </label>
-                <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
+                <input v-model="pin_apt" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
             </div>
                 <input type="button" class="inp" value="Ingresar" @click="guardarDatos">
         </form>
