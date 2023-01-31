@@ -20,7 +20,7 @@ html{
     width: 100%;
     padding: 10px 0;
     color: #fff;
-
+    font-size: 20px;
     color: aqua;
     background: transparent;
     border: none;
@@ -40,6 +40,7 @@ html{
     width: 100%;
     color: white;
     border-radius: 10px;
+    font-size: larger;
   }
 
 .personalizacion {
@@ -53,7 +54,3 @@ html{
   background-color: #6b358f;
 }
 
-.a {
-  font-size: 25px;
-
-}

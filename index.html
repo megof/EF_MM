@@ -50,7 +50,7 @@
                 </div>
                 <div class="elemento">
                     <label for="pin">Cantidad de zapatos: </label>
-                    <input v-model="pin" type="number" placeholder="Ingrese cantidad de zapatos" name="pin" id="pin" required="true" />
+                    <input v-model="cnt_shoes" type="number" placeholder="Ingrese cantidad de zapatos" name="pin" id="pin" required="true" />
                 </div>
                 <div class="elemento">
                     <label for="pin">Cantidad de zapatos a realizar: </label>
@@ -59,11 +59,11 @@
 
                 <div class="elemento">
                     <label for="pin">Precio de ensamble zapatos: </label>
-                    <input v-model="pin" type="number" placeholder="Ingrese valor del ensamblado" name="pin" id="pin" required="true" />
+                    <input v-model="prc_shoes" type="number" placeholder="Ingrese valor del ensamblado" name="pin" id="pin" required="true" />
                 </div>
                 <div class="elemento">
                     <label for="pin">Precio de ensamble zapatillas: </label>
-                    <input v-model="pin" type="number" placeholder="Ingrese valor del ensamblado" name="pin" id="pin" required="true" />
+                    <input v-model="" type="number" placeholder="Ingrese valor del ensamblado" name="pin" id="pin" required="true" />
                 </div>
                 <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
             </form>
@@ -74,7 +74,7 @@
             <form id="forma" name="forma">
                 <div class="elemento">
                     <label for="pin">Horas extras trabajadas: </label>
-                    <input v-model="pin" type="text" placeholder="Ingrese horas extras" name="pin" id="pin" required="true" />
+                    <input v-model="hr_ex" type="text" placeholder="Ingrese horas extras" name="pin" id="pin" required="true" />
                 </div>
                 <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
             </form>
@@ -86,12 +86,12 @@
             <form id="forma" name="forma">
                 <div class="elemento">
                     <label for="appointment">Horas extras trabajadas: </label>
-                    <input v-model="appointment" type="number" placeholder="Ingrese horas extras" name="appointment"
+                    <input v-model="hr_ex" type="number" placeholder="Ingrese horas extras" name="appointment"
                         required="true" id="appointment" />
                 </div>
                 <div class="elemento">
                     <label for="pin">Cantidad de zapatos ensamblados: </label>
-                    <input v-model="pin" type="number" placeholder="Ingrese la cantidad de zapatos" name="pin" id="pin" required="true" />
+                    <input v-model="nm_zpt" type="number" placeholder="Ingrese la cantidad de zapatos" name="pin" id="pin" required="true" />
                 </div>
                 <div class="elemento">
                     <label for="pin">Cantidad de zapatillas ensambladas: </label>
@@ -100,12 +100,12 @@
 
                 <div class="elemento">
                     <label for="pin">Auxilio de transporte: </label>
-                    <input v-model="salary[ls_adm]" type="number" readonly onmousedown="return false" name="appointment"
+                    <input v-model="sbd_tr" type="number" readonly onmousedown="return false" name="appointment"
                         required="true" id="appointment" class="a" />
                 </div>
                 <div class="elemento">
                     <label for="pin">Cantidad de hijos: </label>
-                    <input v-model="pin" type="number" placeholder="Ingrese la cantidad de hijos" name="pin" id="pin" required="true" />
+                    <input v-model="hj" type="number" placeholder="Ingrese la cantidad de hijos" name="pin" id="pin" required="true" />
                 </div>
                 <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
             </form>
@@ -124,7 +124,7 @@
                 </div>
                 <div class="elemento">
                     <label for="pin">Auxilio de transporte: </label>
-                    <input v-model="salary[ls_adm]" type="number" readonly onmousedown="return false" name="appointment"
+                    <input v-model="sbd_tr" type="number" readonly onmousedown="return false" name="appointment"
                         required="true" id="appointment" class="a" />
                 </div>
                 <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
