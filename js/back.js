@@ -5,13 +5,13 @@ var app = new Vue({
         ls_apt:"Administrador",//tipo de usuario
         ls_adm:0,//tipo de usuario para modificaciones del administrador
         pin_apt:"",//pin de usuarios
-        salary:[1800000,1500000,1300000],//salarios de los empleados (Ensamblador, Secretario, Vendedor)
+        salary:[1800000,1500000,1300606],//salarios de los empleados (Ensamblador, Secretario, Vendedor)
         cnt_shoes:0,//cantidad máxima de zapatos permitida
         prc_shoes:5000,//costo de ensamble zapatos
         prc_zpl:3500,//costo de ensamble zapatillas
         gain:1000,//comisión por venta
         hr_ex:0,//hora extra secretario/ensamblador
-        sbd_tr:0,//subsidio de transporte
+        sbd_tr:140606,//subsidio de transporte
         vnt:0,//ventas de zapatos (revisar)
         nm_zpt:0,//número de zapatos ensamblados
         nm_zpl:0,//número de zapatillas ensamblados
