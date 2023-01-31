@@ -2,7 +2,7 @@ var app = new Vue({
     el:'#app',
     data:{
         message:"",
-        ls_apt:"Administrador",
+        ls_apt:"Secretario",
         ls_adm:0,
         pin_apt:"",
         salary:[1800000,1500000,1300000],
