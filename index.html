@@ -13,7 +13,7 @@
 <body>
     <div id="app">
 
-        <div class="contenedor">
+        <div class="contenedor" v-if="login">
             <h3 style="text-align: center; color: aqua;">Login</h3>
             <form id="forma" name="forma">
                 <div class="elemento">
@@ -32,7 +32,7 @@
                     <input v-model="pin_apt" type="text" placeholder="Ingrese el pin" name="pin" id="pin"
                         required="true" />
                 </div>
-                <input type="button" class="inp" value="Ingresar" @click="guardarDatos">
+                <input type="button" class="inp" value="Ingresar" @click="log_in">
             </form>
         </div>
 
@@ -45,33 +45,38 @@
                 <option value="2">Vendedor</option>
             </select>
             <form id="forma" name="forma">
-                <div class="elemento">
+                <div class="elemento" v-if="ls_adm!=-1">
                     <label for="appointment">Salario Base: </label>
-                    <input v-model="salary[ls_adm]" type="text" readonly onmousedown="return false" name="appointment"
-                        required="true" id="appointment" class="a" />
+                    <input v-model="salary[ls_adm]" type="number" name="appointment" required="true" id="appointment"
+                        class="a" />
                 </div>
-                <div class="elemento">
-                    <label for="pin">Cantidad de zapatos: </label>
+                <div class="elemento" v-if="ls_adm==0">
+                    <label for="pin">Cantidad de zapatos a realizar: </label>
                     <input v-model="cnt_shoes" type="number" placeholder="Ingrese cantidad de zapatos" name="pin"
                         id="pin" required="true" />
                 </div>
-                <div class="elemento">
-                    <label for="pin">Cantidad de zapatos a realizar: </label>
-                    <input v-model="pin" type="number" placeholder="Ingrese cantidad de zapatos" name="pin" id="pin"
-                        required="true" />
+                <div class="elemento" v-if="ls_adm==0">
+                    <label for="pin">Cantidad de zapatillas a realizar: </label>
+                    <input v-model="cnt_zpl" type="number" placeholder="Ingrese cantidad de zapatillas" name="pin"
+                        id="pin" required="true" />
                 </div>
 
-                <div class="elemento">
+                <div class="elemento" v-if="ls_adm==0">
                     <label for="pin">Precio de ensamble zapatos: </label>
                     <input v-model="prc_shoes" type="number" placeholder="Ingrese valor del ensamblado" name="pin"
                         id="pin" required="true" />
                 </div>
-                <div class="elemento">
+                <div class="elemento" v-if="ls_adm==0">
                     <label for="pin">Precio de ensamble zapatillas: </label>
-                    <input v-model="prc_shoes" type="number" placeholder="Ingrese valor del ensamblado" name="pin"
+                    <input v-model="prc_zpl" type="number" placeholder="Ingrese valor del ensamblado" name="pin"
                         id="pin" required="true" />
                 </div>
-                <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
+                <div class="elemento" v-if="ls_adm==2">
+                    <label for="pin">Comisión de ventas realizadas: </label>
+                    <input v-model="gain" type="number" placeholder="Ingrese el porcentaje de comisión" name="pin"
+                        id="pin" required="true" />
+                </div>
+                <input type="button" class="inp" value="Guardar datos" >
             </form>
         </div>
 
@@ -107,15 +112,16 @@
                         id="pin" required="true" />
                 </div>
 
-                <div class="elemento">
-                    <label for="pin">Auxilio de transporte: </label>
-                    <input v-model="sbd_tr" type="number" readonly onmousedown="return false" name="appointment"
-                        required="true" id="appointment" class="a" />
-                </div>
+
                 <div class="elemento">
                     <label for="pin">Cantidad de hijos: </label>
                     <input v-model="hj" type="number" placeholder="Ingrese la cantidad de hijos" name="pin" id="pin"
                         required="true" />
+                </div>
+                <div class="elemento">
+                    <label for="pin">Auxilio de transporte: </label>
+                    <input v-model="sbd_tr" type="number" readonly onmousedown="return false" name="appointment"
+                        required="true" id="appointment" class="a" />
                 </div>
                 <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
             </form>
@@ -126,13 +132,13 @@
             <form id="forma" name="forma">
                 <div class="elemento">
                     <label for="pin">Cantidad de zapatos vendidos: </label>
-                    <input v-model="cnt_ven" type="number" placeholder="Ingrese la cantidad vendida" name="pin" id="pin"
+                    <input v-model="vnt" type="number" placeholder="Ingrese la cantidad vendida" name="pin" id="pin"
                         required="true" />
                 </div>
                 <div class="elemento">
                     <label for="pin">Cantidad de zapatillas vendidos: </label>
-                    <input v-model="cnt_venzl" type="number" placeholder="Ingrese la cantidad vendida " name="pin" id="pin"
-                        required="true" />
+                    <input v-model="cnt_venzl" type="number" placeholder="Ingrese la cantidad vendida " name="pin"
+                        id="pin" required="true" />
                 </div>
                 <div class="elemento">
                     <label for="pin">Auxilio de transporte: </label>

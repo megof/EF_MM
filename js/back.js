@@ -2,23 +2,24 @@ var app = new Vue({
     el:'#app',
     data:{
         message:"",
-        ls_apt:"Administrador",//tipo de usuario
+        ls_apt:"",//tipo de usuario
         ls_adm:0,//tipo de usuario para modificaciones del administrador
         pin_apt:"",//pin de usuarios
         salary:[1800000,1500000,1300606],//salarios de los empleados (Ensamblador, Secretario, Vendedor)
-        cnt_shoes:0,//cantidad máxima de zapatos permitida
+        cnt_shoes:0,//cantidad máxima de zapatos permitidas
+        cnt_zpl: 0,//cantidad máxima de zapatillas permitidas
         prc_shoes:5000,//costo de ensamble zapatos
         prc_zpl:3500,//costo de ensamble zapatillas
-        gain:1000,//comisión por venta
+        gain:5,//comisión por venta
         hr_ex:0,//hora extra secretario/ensamblador
         sbd_tr:140606,//subsidio de transporte
         vnt:0,//ventas de zapatos (revisar)
+        cnt_venzl:0,//cantidad de zapatillas vendida
         nm_zpt:0,//número de zapatos ensamblados
         nm_zpl:0,//número de zapatillas ensamblados
         hj:0,//hijos ensamblador
-        cnt_ven:0,//cantidad de zapatos vendida
-        cnt_venzl:0,//cantidad de zapatillas vendida
         employes:[],
+        login:true,
     },
     methods:{
         guardarDatos(){
@@ -41,6 +42,8 @@ var app = new Vue({
                 case "Vendedor":
                     this.employes.push({
                         type: this.ls_apt,
+                        vtz: this.vnt,
+                        vtl: this.cnt_venzl,
                     })
                     break;            
                 default:
@@ -48,10 +51,10 @@ var app = new Vue({
             }
         },
         calc_salary(employee){ 
-            let sly = 0;           
+            let sly = 0;        
             switch (employee.type) {
                 case "Ensamblador":
-                    sly = salary[0]+(4833*2.2*employee.ex);
+                    sly = this.salary[0]+(4833*2.2*employee.ex);
                     if(employee.zpt>1000){
                         sly += employee.zpt*this.prc_shoes*1.1
                     }else if(employee.zpt>2000){
@@ -66,20 +69,33 @@ var app = new Vue({
                     }else{
                         sly += employee.zpl*this.prc_zpl
                     }
-                    sly +=140000                    
-                    if(employee.hj=1){
+                    sly +=this.sbd_tr                   
+                    if(employee.hj==1){
                         sly += 80000
                     }else if(employee.hj>=2){
                         sly += 60000*employee.hj
                     }
                     break;
-                case "Secretario":
+                case "Secretario":                    
+                    sly = this.salary[1]+(4833*1.8*employee.ex);
                     break;
-                case "Vendedor":
+                case "Vendedor":     
+                    if(sly>5000000 && sly<=10000000){
+                        sly +=this.salary[2]*1.1;
+                    }else if(sly>10000000){
+                        sly +=this.salary[2]*1.2;
+                    }else{                 
+                        sly +=this.salary[2];
+                    } 
+                    sly += ((employee.vtz*this.prc_shoes + employee.vtl*this.prc_zpl)*(this.gain/100));
                     break;            
                 default:
                     break;
             }
+            return sly;
+        },
+        log_in(){
+            return this.login = !this.login
         },
     },
 })
