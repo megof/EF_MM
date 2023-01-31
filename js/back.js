@@ -7,8 +7,8 @@ var app = new Vue({
         ls_log:"",
         pin_apt:"",//pin de usuarios
         salary:[1800000,1500000,1300606],//salarios de los empleados (Ensamblador, Secretario, Vendedor)
-        cnt_shoes:0,//cantidad máxima de zapatos permitidas
-        cnt_zpl: 0,//cantidad máxima de zapatillas permitidas
+        cnt_shoes:50,//cantidad máxima de zapatos permitidas
+        cnt_zpl: 50,//cantidad máxima de zapatillas permitidas
         prc_shoes:5000,//costo de ensamble zapatos
         prc_zpl:3500,//costo de ensamble zapatillas
         gain:5,//comisión por venta
