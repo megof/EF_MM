@@ -7,7 +7,27 @@
     <title>s</title>
 </head>
 <body>
-    <div id="app" class="">sdf
-    </div>    
+    
+    <div class="contenedor" id="app">
+        <h3 v-text="message" v-model="" style="text-align: center; color: aqua;">Login</h3>
+        <form id="forma" name="forma">
+            <div class="elemento">
+                <label for="appointment">Cargo: </label>
+                <br>
+                <select class="personalizacion" required="true">
+
+                    <option>Administrador</option>
+                    <option>Ensamblador</option>
+                    <option>Secretario</option>
+                    <option>Vendedor</option>
+                  </select>
+            </div>
+            <div class="elemento">
+                <label for="pin">Pin: </label>
+                <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
+            </div>
+                <input type="button" class="inp" value="Ingresar" @click="guardarDatos">
+        </form>
+    </div>
 </body>
 </html>
