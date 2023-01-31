@@ -36,11 +36,16 @@
 
     <div class="contenedor" v-if="ls_apt=='Administrador'"> 
         <h3 style="text-align: center; color: aqua;">Administrador</h3>
+        <select v-model="ls_adm" class="personalizacion" required="true">
+            <option value="0">Ensamblador</option>
+            <option value="1">Secretario</option>
+            <option value="2">Vendedor</option>
+        </select>
         <form id="forma" name="forma">
             <div class="elemento">
                 <label for="appointment">Salario Base: </label>
-                <input v-model="appointment" type="text" value="1300000" readonly name="appointment"
-                    required="true" id="appointment" />
+                <input v-model="salary[ls_adm]" type="text" readonly onmousedown="return false" name="appointment"
+                    required="true" id="appointment" class="a"/>
             </div>
             <div class="elemento">
                 <label for="pin">Cantidad de zapatos: </label>
