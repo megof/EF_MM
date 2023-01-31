@@ -7,7 +7,129 @@
     <title>s</title>
 </head>
 <body>
+<<<<<<< Updated upstream
     <div id="app" class="">sdf
     </div>    
+=======
+    <div id="app">
+
+        <div class="contenedor">
+            <h3 style="text-align: center; color: aqua;">Login</h3>
+            <form id="forma" name="forma">
+                <div class="elemento">
+                    <label for="appointment">Cargo: </label>
+                    <br>
+                    <select v-model="ls_apt" class="personalizacion" required="true">
+
+                        <option>Administrador</option>
+                        <option>Ensamblador</option>
+                        <option>Secretario</option>
+                        <option>Vendedor</option>
+                    </select>
+                </div>
+                <div class="elemento">
+                    <label for="pin">Pin: </label>
+                    <input v-model="pin_apt" type="text" placeholder="Ingrese el pin" name="pin" id="pin"
+                        required="true" />
+                </div>
+                <input type="button" class="inp" value="Ingresar" @click="guardarDatos">
+            </form>
+        </div>
+
+        <div class="contenedor" v-if="ls_apt=='Administrador'">
+            <h3 style="text-align: center; color: aqua;">Administrador</h3>
+            <select v-model="ls_adm" class="personalizacion" required="true">
+                <option>Ensamblador</option>
+                <option>Secretario</option>
+                <option>Vendedor</option>
+            </select>
+            <form id="forma" name="forma">
+                <div class="elemento">
+                    <label for="appointment">Salario Base: </label>
+                    <input v-model="appointment" type="text" name="appointment" required="true"
+                        id="appointment" readonly onmousedown="return false" class="a" />
+                </div>
+                <div class="elemento">
+                    <label for="pin">Cantidad de zapatos: </label>
+                    <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
+                </div>
+                <div class="elemento">
+                    <label for="pin">Cantidad de zapatos a realizar: </label>
+                    <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
+                </div>
+                <div class="elemento">
+                    <label for="pin">Comisión por ventas: </label>
+                    <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
+                </div>
+                <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
+            </form>
+        </div>
+
+        <div class="contenedor" v-if="ls_apt=='Secretario'">
+            <h3 style="text-align: center; color: aqua;">Secretario</h3>
+            <form id="forma" name="forma">
+                <div class="elemento">
+                    <label for="pin">Horas extras trabajadas: </label>
+                    <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
+                </div>
+                <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
+            </form>
+        </div>
+
+
+        <div class="contenedor" v-if="ls_apt=='Ensamblador'">
+            <h3 style="text-align: center; color: aqua;">Ensamblador</h3>
+            <form id="forma" name="forma">
+                <div class="elemento">
+                    <label for="appointment">Horas extras trabajadas: </label>
+                    <input v-model="appointment" type="text" placeholder="Ingrese su cargo" name="appointment"
+                        required="true" id="appointment" />
+                </div>
+                <div class="elemento">
+                    <label for="pin">Cantidad de zapatos ensamblados: </label>
+                    <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
+                </div>
+                <div class="elemento">
+                    <label for="pin">Cantidad de zapatillas ensambladas: </label>
+                    <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
+                </div>
+
+                <div class="elemento">
+                    <label for="pin">Auxilio de transporte: </label>
+                    <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
+                </div>
+                <div class="elemento">
+                    <label for="pin">Cantidad de hijos: </label>
+                    <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
+                </div>
+                <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
+            </form>
+        </div>
+
+        <div class="contenedor" v-if="ls_apt=='Vendedor'">
+            <h3 style="text-align: center; color: aqua;">Vendedor</h3>
+            <form id="forma" name="forma">
+                <div class="elemento">
+                    <label for="appointment">Salario Base: </label>
+                    <input v-model="appointment" type="text" placeholder="Ingrese su cargo" name="appointment"
+                        required="true" id="appointment" />
+                </div>
+                <div class="elemento">
+                    <label for="pin">Cantidad de zapatos vendidos: </label>
+                    <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
+                </div>
+                <div class="elemento">
+                    <label for="pin">Cantidad de zapatillas vendidos: </label>
+                    <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
+                </div>
+                <div class="elemento">
+                    <label for="pin">Comisión de ventas: </label>
+                    <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
+                </div>
+                <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
+            </form>
+        </div>
+    </div>
+>>>>>>> Stashed changes
 </body>
 </html>
