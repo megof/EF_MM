@@ -20,11 +20,15 @@ html {
     width: 100%;
     padding: 10px 0;
     color: #fff;
+
+    color: aqua;
     background: transparent;
     border: none;
     border-bottom: 1px solid #fff;
     margin-bottom: 30px;
   }
+  
+  
   .inp {
     background-color: #f72585;
     border: none;
