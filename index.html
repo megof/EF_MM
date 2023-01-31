@@ -37,7 +37,7 @@
         </div>
 
         <div class="contenedor" v-if="ls_apt=='Administrador'">
-            <span>&#xf02f;</span>
+            <span class="print">&#xf02f;</span> <span>&#xf08b;</span>
             <h3 style="text-align: center; color: aqua; margin-top: -4%;">Administrador </h3>
             <select v-model="ls_adm" class="personalizacion" required="true">
                 <option value="0">Ensamblador</option>
@@ -81,6 +81,7 @@
         </div>
 
         <div class="contenedor" v-if="ls_apt=='Secretario'">
+            <span>&#xf08b;</span>
             <h3 style="text-align: center; color: aqua;">Secretario</h3>
             <form id="forma" name="forma">
                 <div class="elemento">
@@ -94,6 +95,7 @@
 
 
         <div class="contenedor" v-if="ls_apt=='Ensamblador'">
+            <span>&#xf08b;</span>
             <h3 style="text-align: center; color: aqua;">Ensamblador</h3>
             <form id="forma" name="forma">
                 <div class="elemento">
@@ -112,7 +114,6 @@
                         id="pin" required="true" />
                 </div>
 
-
                 <div class="elemento">
                     <label for="pin">Cantidad de hijos: </label>
                     <input v-model="hj" type="number" placeholder="Ingrese la cantidad de hijos" name="pin" id="pin"
@@ -128,6 +129,7 @@
         </div>
 
         <div class="contenedor" v-if="ls_apt=='Vendedor'">
+            <span>&#xf08b;</span>
             <h3 style="text-align: center; color: aqua;">Vendedor</h3>
             <form id="forma" name="forma">
                 <div class="elemento">
