@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <title>s</title>
 </head>
 
@@ -36,7 +37,8 @@
         </div>
 
         <div class="contenedor" v-if="ls_apt=='Administrador'">
-            <h3 style="text-align: center; color: aqua;">Administrador</h3>
+            <span>&#xf02f;</span>
+            <h3 style="text-align: center; color: aqua; margin-top: -4%;">Administrador </h3>
             <select v-model="ls_adm" class="personalizacion" required="true">
                 <option value="0">Ensamblador</option>
                 <option value="1">Secretario</option>
@@ -50,20 +52,24 @@
                 </div>
                 <div class="elemento">
                     <label for="pin">Cantidad de zapatos: </label>
-                    <input v-model="cnt_shoes" type="number" placeholder="Ingrese cantidad de zapatos" name="pin" id="pin" required="true" />
+                    <input v-model="cnt_shoes" type="number" placeholder="Ingrese cantidad de zapatos" name="pin"
+                        id="pin" required="true" />
                 </div>
                 <div class="elemento">
                     <label for="pin">Cantidad de zapatos a realizar: </label>
-                    <input v-model="pin" type="number" placeholder="Ingrese cantidad de zapatos" name="pin" id="pin" required="true" />
+                    <input v-model="pin" type="number" placeholder="Ingrese cantidad de zapatos" name="pin" id="pin"
+                        required="true" />
                 </div>
 
                 <div class="elemento">
                     <label for="pin">Precio de ensamble zapatos: </label>
-                    <input v-model="prc_shoes" type="number" placeholder="Ingrese valor del ensamblado" name="pin" id="pin" required="true" />
+                    <input v-model="prc_shoes" type="number" placeholder="Ingrese valor del ensamblado" name="pin"
+                        id="pin" required="true" />
                 </div>
                 <div class="elemento">
                     <label for="pin">Precio de ensamble zapatillas: </label>
-                    <input v-model="" type="number" placeholder="Ingrese valor del ensamblado" name="pin" id="pin" required="true" />
+                    <input v-model="prc_shoes" type="number" placeholder="Ingrese valor del ensamblado" name="pin"
+                        id="pin" required="true" />
                 </div>
                 <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
             </form>
@@ -74,7 +80,8 @@
             <form id="forma" name="forma">
                 <div class="elemento">
                     <label for="pin">Horas extras trabajadas: </label>
-                    <input v-model="hr_ex" type="text" placeholder="Ingrese horas extras" name="pin" id="pin" required="true" />
+                    <input v-model="hr_ex" type="text" placeholder="Ingrese horas extras" name="pin" id="pin"
+                        required="true" />
                 </div>
                 <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
             </form>
@@ -91,11 +98,13 @@
                 </div>
                 <div class="elemento">
                     <label for="pin">Cantidad de zapatos ensamblados: </label>
-                    <input v-model="nm_zpt" type="number" placeholder="Ingrese la cantidad de zapatos" name="pin" id="pin" required="true" />
+                    <input v-model="nm_zpt" type="number" placeholder="Ingrese la cantidad de zapatos" name="pin"
+                        id="pin" required="true" />
                 </div>
                 <div class="elemento">
                     <label for="pin">Cantidad de zapatillas ensambladas: </label>
-                    <input v-model="pin" type="number" placeholder="Ingrese la cantidad de zapatillas" name="pin" id="pin" required="true" />
+                    <input v-model="pin" type="number" placeholder="Ingrese la cantidad de zapatillas" name="pin"
+                        id="pin" required="true" />
                 </div>
 
                 <div class="elemento">
@@ -105,7 +114,8 @@
                 </div>
                 <div class="elemento">
                     <label for="pin">Cantidad de hijos: </label>
-                    <input v-model="hj" type="number" placeholder="Ingrese la cantidad de hijos" name="pin" id="pin" required="true" />
+                    <input v-model="hj" type="number" placeholder="Ingrese la cantidad de hijos" name="pin" id="pin"
+                        required="true" />
                 </div>
                 <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
             </form>
@@ -116,11 +126,13 @@
             <form id="forma" name="forma">
                 <div class="elemento">
                     <label for="pin">Cantidad de zapatos vendidos: </label>
-                    <input v-model="pin" type="number" placeholder="Ingrese la cantidad vendida" name="pin" id="pin" required="true" />
+                    <input v-model="pin" type="number" placeholder="Ingrese la cantidad vendida" name="pin" id="pin"
+                        required="true" />
                 </div>
                 <div class="elemento">
                     <label for="pin">Cantidad de zapatillas vendidos: </label>
-                    <input v-model="pin" type="number" placeholder="Ingrese la cantidad vendida " name="pin" id="pin" required="true" />
+                    <input v-model="pin" type="number" placeholder="Ingrese la cantidad vendida " name="pin" id="pin"
+                        required="true" />
                 </div>
                 <div class="elemento">
                     <label for="pin">Auxilio de transporte: </label>

@@ -54,3 +54,15 @@ html{
   background-color: #6b358f;
 }
 
+@font-face {
+  font-family: "FontAwesome";
+  src: url("fontawesome-webfont.woff");
+}
+
+span{
+  font-family: "FontAwesome", sans-serif;
+  font-size: 200%;
+  color: #f72585;
+  cursor: pointer;
+  margin-left:90%;
+}
