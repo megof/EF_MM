@@ -39,14 +39,14 @@ html {
   }
 
   .personalizacion{
-    background-color: transparent;
+    color: #fff;
     width: 100%;
     border-radius: 8px;
     height: 40px;
     margin: 5px;
     padding: 5px;
     border-color: aqua;
-    color: white;
+    background-color:#6b358f;
   }
   
   

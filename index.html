@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,9 @@
     <link href="./css/style.css" rel="stylesheet" />
     <title>s</title>
 </head>
+
 <body>
-    
+
     <div class="contenedor" id="app">
         <h3 v-text="message" v-model="" style="text-align: center; color: aqua;">Login</h3>
         <form id="forma" name="forma">
@@ -21,15 +23,13 @@
                     <option>Ensamblador</option>
                     <option>Secretario</option>
                     <option>Vendedores</option>
-                    
-                    <option>Ven</option>
-                  </select>
+                </select>
             </div>
             <div class="elemento">
                 <label for="pin">Pin: </label>
                 <input v-model="pin_apt" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
             </div>
-                <input type="button" class="inp" value="Ingresar" @click="guardarDatos">
+            <input type="button" class="inp" value="Ingresar" @click="guardarDatos">
         </form>
     </div>
 
@@ -38,7 +38,8 @@
         <form id="forma" name="forma">
             <div class="elemento">
                 <label for="appointment">Salario Base: </label>
-                <input v-model="appointment" type="text" placeholder="Ingrese su cargo" name="appointment" required="true" id="appointment" />
+                <input v-model="appointment" type="text" placeholder="Ingrese su cargo" name="appointment"
+                    required="true" id="appointment" />
             </div>
             <div class="elemento">
                 <label for="pin">Cantidad de zapatos: </label>
@@ -52,7 +53,7 @@
                 <label for="pin">Comisión por ventas: </label>
                 <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
             </div>
-                <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
+            <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
         </form>
     </div>
 
@@ -63,17 +64,18 @@
                 <label for="pin">Horas extras trabajadas: </label>
                 <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
             </div>
-                <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
+            <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
         </form>
     </div>
 
-    
+
     <div class="contenedor">
         <h3 v-text="Login" style="text-align: center; color: aqua;">Ensamblador</h3>
         <form id="forma" name="forma">
             <div class="elemento">
                 <label for="appointment">Horas extras trabajadas: </label>
-                <input v-model="appointment" type="text" placeholder="Ingrese su cargo" name="appointment" required="true" id="appointment" />
+                <input v-model="appointment" type="text" placeholder="Ingrese su cargo" name="appointment"
+                    required="true" id="appointment" />
             </div>
             <div class="elemento">
                 <label for="pin">Cantidad de zapatos ensamblados: </label>
@@ -83,7 +85,7 @@
                 <label for="pin">Cantidad de zapatillas ensambladas: </label>
                 <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
             </div>
-            
+
             <div class="elemento">
                 <label for="pin">Auxilio de transporte: </label>
                 <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
@@ -92,7 +94,7 @@
                 <label for="pin">Cantidad de hijos: </label>
                 <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
             </div>
-                <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
+            <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
         </form>
     </div>
 
@@ -101,7 +103,8 @@
         <form id="forma" name="forma">
             <div class="elemento">
                 <label for="appointment">Salario Base: </label>
-                <input v-model="appointment" type="text" placeholder="Ingrese su cargo" name="appointment" required="true" id="appointment" />
+                <input v-model="appointment" type="text" placeholder="Ingrese su cargo" name="appointment"
+                    required="true" id="appointment" />
             </div>
             <div class="elemento">
                 <label for="pin">Cantidad de zapatos vendidos: </label>
@@ -115,7 +118,7 @@
                 <label for="pin">Comisión de ventas: </label>
                 <input v-model="pin" type="text" placeholder="Ingrese el pin" name="pin" id="pin" required="true" />
             </div>
-                <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
+            <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
         </form>
     </div>
 
@@ -123,4 +126,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script src="prueba.js"></script>
+
 </html>
