@@ -4,6 +4,7 @@ var app = new Vue({
         message:"",
         ls_apt:"",//tipo de usuario
         ls_adm:0,//tipo de usuario para modificaciones del administrador
+        ls_log:"",
         pin_apt:"",//pin de usuarios
         salary:[1800000,1500000,1300606],//salarios de los empleados (Ensamblador, Secretario, Vendedor)
         cnt_shoes:0,//cantidad máxima de zapatos permitidas
@@ -49,6 +50,7 @@ var app = new Vue({
                 default:
                     break;
             }
+            console.log(this.calc_salary(this.employes[0]))
         },
         calc_salary(employee){ 
             let sly = 0;        
@@ -95,7 +97,9 @@ var app = new Vue({
             return sly;
         },
         log_in(){
-            return this.login = !this.login
+            (this.pin_apt==0123)?
+            this.ls_apt = "1":
+            this.ls_apt = "2";
         },
     },
 })
