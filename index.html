@@ -150,63 +150,39 @@
                 <input type="button" class="inp" value="Guardar datos" @click="guardarDatos">
             </form>
         </div>
-    <div v-if="prnt">
+    <div  v-if="ls_apt=='Administrador'">
 
     <table>
         <tr>
-            <th>Cargos</th>
-            <th>Empleados</th>
+            <th>Cargo</th>
             <th>Salario</th>
-        </tr>
-        <tr>
-            <th rowspan="2">Ensambladores</th>
-            <td>Luis</td>
-            <td>1700000</td>
-        </tr>
-        <tr>
-            <td>Luis</td>
-            <td>1700000</td>
-        </tr>
-        <tr>
-            <th rowspan="2">Vendedores</th>
-            <td>David</td>
-            <td>1700000</td>
-        </tr>
-        <tr>
-            <td>David Luis</td>
-            <td>1700000</td>
-        </tr>
-        <tr>
-            <th rowspan="2">Secretarios</th>
-            <td>Luis David</td>
-            <td>1700000</td>
-        </tr>
-        <tr>
-            <td>David</td>
-            <td>1700000</td>
+        </tr>        
+        <tr v-for="(user, index) in employes" :key="index">
+            <td>{{user.type}}</td>
+            <td>{{user.sry}}</td>
         </tr>
     </table>
 <h1></h1>
-    <table>
+    <table >
         <tr>
             <th>Cargo</th>
             <th>Total</th>
         </tr>
         <tr>
             <td>Ensamblador</td>
-            <td>1700000</td>
+            <td>{{sum_sry("Ensamblador")}}</td>
         </tr>
         <tr>
             <td>Secretario</td>
-            <td>1700000</td>
+            <td>{{sum_sry("Secretario")}}</td>
         </tr>
         <tr>
             <td>Vendedor</td>
-            <td>1700000</td>
+            <td>{{sum_sry("Vendedor")}}</td>
         </tr>
         <tr>
             <td>Total Liquidado</td>
-            <td>1700000(3)</td>
+            <td>{{sum_sry("ALL")}}</td>
         </tr>
     </table>
 </div>

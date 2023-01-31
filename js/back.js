@@ -19,9 +19,9 @@ var app = new Vue({
         nm_zpt:0,//número de zapatos ensamblados
         nm_zpl:0,//número de zapatillas ensamblados
         hj:0,//hijos ensamblador
-        employes:[],
-        login:true,
-        prnt:false,
+        employes:[],//lista de empleados registrados
+        login:true,//conocer ele stado de las sesiones
+        prnt:false,//ver/ocultar tabla de liquidación
     },
     methods:{
         guardarDatos(){
@@ -44,6 +44,7 @@ var app = new Vue({
                     this.employes.push({
                         type: this.ls_apt,
                         ex: this.hr_ex,
+                        sry: this.calc_salary(),
                     })
                     break;
                 case "Vendedor":
@@ -51,6 +52,7 @@ var app = new Vue({
                         type: this.ls_apt,
                         vtz: this.vnt,
                         vtl: this.cnt_venzl,
+                        sry: this.calc_salary(),
                     })
                     break;            
                 default:
@@ -120,6 +122,17 @@ var app = new Vue({
             this.login = true;
             this.ls_apt = "";
             this.prnt = false;
+        },
+        sum_sry(type){
+            let sum = 0;
+            this.employes.map(elt => {
+                if(elt.type==type){
+                    sum += elt.sry
+                }else if(type=="ALL"){
+                    sum += elt.sry
+                }
+            })
+            return sum;
         },
     },
 })
