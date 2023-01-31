@@ -1,9 +1,9 @@
 # EF_MM
 Ejercicio 4
 # Marín Castaño Luis Alfonso: 
-Encargado del Front-End
+Encargado del Front-End y Back-End
 # Ospina Ortega Juan David: 
-Encargado del Back-End
+Encargado del Front-End Back-End
 
 # Login
 
